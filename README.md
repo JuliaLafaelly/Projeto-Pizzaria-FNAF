@@ -8,5 +8,7 @@ Inspirado na icônica Freddy Fazbear's Pizza, este site traz um visual
 personalizado com elementos do universo FNAF, cardápio interativo e 
 identidade visual única para os fãs da franquia.
 
-## Tecnologias
-- HTML / CSS / JavaScript
+Linguagens Utilizadas
+<p>
+<img src="https://skillicons.dev/icons?i=html,css"/>
+</p>
