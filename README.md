@@ -1,4 +1,4 @@
-#Pizzaria FNAF
+## Pizzaria FNAF
 
 Um site de pizzaria com a temática de Five Nights at Freddy's, unindo o clima 
 sombrio e nostálgico do jogo com a praticidade de um cardápio online.
