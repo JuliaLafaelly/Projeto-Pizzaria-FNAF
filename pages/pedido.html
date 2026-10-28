@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Monte seu pedido de pizza temática da Freddy's Pizza Arcade.">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Fazer pedido | Freddy's Pizza Arcade</title>
+</head>
+<body>
+    <header class="inicio">
+        <h1>Freddy's Pizza Arcade</h1>
+        <p>Onde o sabor encontra o terror!</p>
+    </header>
+
+    <nav aria-label="Navegação principal">
+        <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="menu.html">Cardápio</a></li>
+            <li><a href="pedido.html" aria-current="page">Fazer pedido</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="pedido" aria-labelledby="titulo-pedido">
+            <h2 id="titulo-pedido">Faça seu pedido</h2>
+            <form id="form-pedido">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" autocomplete="name" required>
+
+                <label for="pizza">Escolha sua pizza:</label>
+                <select id="pizza" name="pizza" required>
+                    <option value="" selected disabled>Selecione uma pizza</option>
+                    <option value="Freddy">Pizza do Freddy</option>
+                    <option value="Chica">Pizza da Chica</option>
+                    <option value="Foxy">Pizza do Foxy</option>
+                    <option value="Bonnie">Pizza do Bonnie</option>
+                    <option value="Springtrap">Pizza do Springtrap</option>
+                    <option value="Golden Freddy">Pizza do Golden Freddy</option>
+                    <option value="Circus Baby">Pizza da Circus Baby</option>
+                    <option value="Ennard">Pizza do Ennard</option>
+                    <option value="Puppet">Pizza da Puppet</option>
+                    <option value="Glamrock Freddy">Pizza do Glamrock Freddy</option>
+                </select>
+
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" autocomplete="street-address" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" autocomplete="tel" required>
+
+                <button type="submit">Revisar pedido</button>
+            </form>
+            <p id="confirmacao-pedido" class="confirmacao-pedido" role="status" aria-live="polite" hidden></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Freddy's Pizza Arcade - Cuidado com o turno da noite...</p>
+    </footer>
+    <script>
+        const parametros = new URLSearchParams(window.location.search);
+        const pizzaSolicitada = parametros.get('pizza');
+        const seletorPizza = document.querySelector('#pizza');
+        if (pizzaSolicitada && [...seletorPizza.options].some((opcao) => opcao.value === pizzaSolicitada)) {
+            seletorPizza.value = pizzaSolicitada;
+        }
+
+        document.querySelector('#form-pedido').addEventListener('submit', (evento) => {
+            evento.preventDefault();
+            const dados = new FormData(evento.currentTarget);
+            const nomePizza = seletorPizza.options[seletorPizza.selectedIndex].text;
+            const confirmacao = document.querySelector('#confirmacao-pedido');
+            confirmacao.textContent = `Demonstração concluída, ${dados.get('nome')}! Seu pedido de ${nomePizza} foi revisado, mas não foi enviado. Esta página ainda não possui sistema de pedidos.`;
+            confirmacao.hidden = false;
+        });
+    </script>
+</body>
+</html>

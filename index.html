@@ -1,97 +1,183 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Bem-vindo à Freddy's Pizza Arcade! Conheça nossas pizzas temáticas inspiradas em Five Nights at Freddy's."
+    >
+
     <title>Freddy's Pizza Arcade</title>
-    <link rel="stylesheet" href="estillo.css">
-   
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <header>
-        <h1 class="slogan">A PIZZA É QUENTE. A DIVERSÃO... NEM TANTO.</h1>
-        <h1 class="titulo-principal">BEM-VINDO À<br>FREDDY'S PIZZA ARCADE</h1>
+        <h1 class="slogan">
+            A PIZZA É QUENTE. A DIVERSÃO... NEM TANTO.
+        </h1>
+
+        <h2 class="titulo-principal">
+            BEM-VINDO À<br>
+            FREDDY'S PIZZA ARCADE
+        </h2>
+
         <div class="botoes">
-            <a href="menu.html" class="botao azul">VER CARDÁPIO COMPLETO</a>
-            <a href="pedido.html" class="botao vermelho">FAZER PEDIDO      </a>
+            <a href="pages/menu.html" class="botao azul">
+                VER CARDÁPIO COMPLETO
+            </a>
+
+            <a href="pages/pedido.html" class="botao vermelho">
+                FAZER PEDIDO
+            </a>
         </div>
     </header>
 
-    <section class="menu">
-        <h2 class="titulo-cardapio">CARDÁPIO</h2>
-        <div class="card-container">
+    <main>
+        <section class="menu" id="cardapio">
+            <h2 class="titulo-cardapio">CARDÁPIO</h2>
 
-            <div class="card red">
-                <a href="paginapizzafreddy.html"><img src="imagens/capafreddy.png" alt="Freddy"  class="card-image"></a>
-                <h3>Freddy Fazbear</h3>
-                <p>Pizza de Calabresa com queijo</p>
+            <div class="card-container">
+
+                <article class="card red">
+                    <a href="pages/paginapizzafreddy.html">
+                        <img
+                            src="imagens/capafreddy.png"
+                            alt="Pizza temática do Freddy Fazbear"
+                            class="card-image"
+                        >
+                    </a>
+                    <h3>Freddy Fazbear</h3>
+                    <p>Pizza de calabresa com queijo.</p>
+                </article>
+
+                <article class="card yellow">
+                    <a href="pages/paginapizzachica.html">
+                        <img
+                            src="imagens/capachica.png"
+                            alt="Pizza temática da Chica"
+                            class="card-image"
+                        >
+                    </a>
+                    <h3>Chica</h3>
+                    <p>Pizza de frango, milho e catupiry.</p>
+                </article>
+
+                <article class="card orange">
+                    <a href="pages/paginapizzafoxy.html">
+                        <img
+                            src="imagens/capafoxy.png"
+                            alt="Pizza temática do Foxy"
+                            class="card-image"
+                        >
+                    </a>
+                    <h3>Foxy</h3>
+                    <p>Pizza de atum.</p>
+                </article>
+
+                <article class="card blue">
+                    <a href="pages/paginapizzabonnie.html">
+                        <img
+                            src="imagens/capabonnie.png"
+                            alt="Pizza temática do Bonnie"
+                            class="card-image"
+                        >
+                    </a>
+                    <h3>Bonnie</h3>
+                    <p>Pizza vegetariana com cogumelos e pimentões.</p>
+                </article>
+
+                <article class="card green">
+                    <a href="pages/paginaspringtrap.html">
+                        <img
+                            src="imagens/capaspringtrap.png"
+                            alt="Pizza temática do Springtrap"
+                            class="card-image"
+                        >
+                    </a>
+                    <h3>Springtrap</h3>
+                    <p>Pizza de calabresa defumada.</p>
+                </article>
+
+                <article class="card gold">
+                    <a href="pages/paginaGoldenFreddy.html">
+                        <img
+                            src="imagens/capaGoldenFreddy.png"
+                            alt="Pizza temática do Golden Freddy"
+                            class="card-image"
+                        >
+                    </a>
+                    <h3>Golden Freddy</h3>
+                    <p>Pizza de quatro queijos dourada.</p>
+                </article>
+
+                <article class="card pink">
+                    <a href="pages/paginaCircusBaby.html">
+                        <img
+                            src="imagens/capaCircusBaby.png"
+                            alt="Pizza temática da Circus Baby"
+                            class="card-image"
+                        >
+                    </a>
+                    <h3>Circus Baby</h3>
+                    <p>Pizza de queijo cremoso e pedaços de abacaxi.</p>
+                </article>
+
+                <article class="card gray">
+                    <a href="pages/paginaEnnard.html">
+                        <img
+                            src="imagens/capaEnnard.png"
+                            alt="Pizza temática do Ennard"
+                            class="card-image"
+                        >
+                    </a>
+                    <h3>Ennard</h3>
+                    <p>Pizza de quatro queijos com carne-seca.</p>
+                </article>
+
+                <article class="card purple">
+                    <a href="pages/paginaPuppet.html">
+                        <img
+                            src="imagens/capaPuppet.png"
+                            alt="Pizza temática da Puppet"
+                            class="card-image"
+                        >
+                    </a>
+                    <h3>The Puppet</h3>
+                    <p>Pizza surpresa com recheio secreto.</p>
+                </article>
+
+                <article class="card neon">
+                    <a href="pages/paginaGlamrockFreddy.html">
+                        <img
+                            src="imagens/capaGlamrockFreddy.png"
+                            alt="Pizza temática do Glamrock Freddy"
+                            class="card-image"
+                        >
+                    </a>
+                    <h3>Glamrock Freddy</h3>
+                    <p>Pizza de pepperoni crocante, queijo cheddar e molho barbecue.</p>
+                </article>
+
             </div>
+        </section>
 
-              <div class="card yellow">
-                <a href="paginapizzachica.html"> <img src="imagens/capachica.png" alt="Chica"  class="card-image"></a>
-                <h3>Chica</h3>
-                <p>Pizza de Frango, milho e catupiry</p>
-            </div>
-
-            <div class="card orange">
-                <a href="paginapizzafoxy.html"><img src="imagens/capafoxy.png" alt="Foxy"  class="card-image"></a>
-                <h3>Foxy</h3>
-                <p>Pizza de Atum</p>
-            </div>
-
-            <div class="card blue">
-                <a href="paginapizzabonnie.html"><img src="imagens/capabonnie.png" alt="Bonnie"  class="card-image"></a>
-                <h3>Bonnie</h3>
-                <p>Pizza Vegetariana com cogumelos e pimentões</p>
-            </div>
-
-            <div class="card green">
-                <a href="paginaspringtrap.html"><img src="imagens/capaspringtrap.png" alt="Springtrap"  class="card-image"></a>
-            <h3>Springtrap</h3>
-                <p>Pizza de calabresa defumada</p>
-            </div>
-
-            <div class="card gold">
-                <a href="paginaGoldenFreddy.html"><img src="imagens/capaGoldenFreddy.png" alt="Golden Freddy"  class="card-image"></a>
-            <h3>Golden Freddy</h3>
-                <p>Pizza de 4 queijos dourada</p>
-            </div>
-
-            <div class="card pink">
-                <a href="paginaCircusBaby.html"><img src="imagens/capaCircusBaby.png" alt="Circus Baby"  class="card-image"></a>
-                <h3>Circus Baby</h3>
-                <p>Pizza de queijo cremoso e pedaços de abacaxci</p>
-            </div>
-
-            <div class="card gray">
-                <a href="paginaEnnard.html"><img src="imagens/capaEnnard.png" alt="Ennard"  class="card-image"></a>
-                <h3>Ennard</h3>
-                <p>Pizza de 4 queijos com carne seca</p>
-            </div>
-
-            <div class="card purple">
-                <a href="paginaPuppet.html"><img src="imagens/capaPuppet.png" alt="The Puppet"  class="card-image"></a>
-            <h3>Puppet</h3>
-                <p>Pizza surpresa com recheio secreto</p>
-            </div>
-
-            <div class="card neon">
-                <a href="paginaGlamrockFreddy.html"> <img src="imagens/capaGlamrockFreddy.png" alt="Glamrock Freddy"  class="card-image"></a>
-            <h3>Glamrock Freddy</h3>
-                <p>Pizza de pepperoni crocante, queijo cheddar e molho barbecue</p>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="arcade">
-        <h2>PIZZA OU HORROR?</h2>
-    </section>
+        <section class="arcade">
+            <h2>PIZZA OU HORROR?</h2>
+        </section>
+    </main>
 
     <footer>
-    <p>&copy; 2025 Freddy's Pizzaria - Cuidado com o turno da noite... </p>
-</footer>
+        <p>
+            &copy; 2026 Freddy's Pizza Arcade -
+            Cuidado com o turno da noite...
+        </p>
+    </footer>
 
 </body>
 </html>

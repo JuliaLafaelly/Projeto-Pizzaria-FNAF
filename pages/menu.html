@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore o cardápio temático da Freddy's Pizza Arcade.">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Cardápio | Freddy's Pizza Arcade</title>
+</head>
+<body>
+    <header class="inicio">
+        <h1>Freddy's Pizza Arcade</h1>
+        <p>Onde o sabor encontra o terror!</p>
+    </header>
+
+    <nav aria-label="Navegação principal">
+        <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="menu.html" aria-current="page">Cardápio</a></li>
+            <li><a href="pedido.html">Fazer pedido</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="menu" aria-labelledby="titulo-menu">
+            <h2 id="titulo-menu">Cardápio temático</h2>
+            <div class="busca">
+                <label class="sr-only" for="pesquisa">Pesquisar pizzas</label>
+                <input type="search" placeholder="Buscar uma pizza..." name="pesquisa" id="pesquisa" autocomplete="off">
+            </div>
+            <p id="sem-resultados" role="status" hidden>Nenhuma pizza encontrada. Tente outro nome.</p>
+
+            <div class="lista-pizzas" id="lista-pizzas">
+                <article class="Pizzaria lista">
+                    <h3>Pizza do Freddy</h3>
+                    <p>Calabresa, queijo e molho especial sombrio.</p>
+                    <img src="../imagens/pizzafreddy.jfif" alt="Pizza de calabresa do Freddy" loading="lazy">
+                    <a href="paginapizzafreddy.html">Confira a pizza do Freddy</a>
+                </article>
+                <article class="Pizzaria lista">
+                    <h3>Pizza da Chica</h3>
+                    <p>Frango, milho e catupiry. Favorita dos animatrônicos!</p>
+                    <img src="../imagens/pizzachica.jfif" alt="Pizza de frango e milho da Chica" loading="lazy">
+                    <a href="paginapizzachica.html">Confira a pizza da Chica</a>
+                </article>
+                <article class="Pizzaria lista">
+                    <h3>Pizza do Foxy</h3>
+                    <p>Atum apimentado, cebola roxa e molho picante.</p>
+                    <img src="../imagens/pizzafox.jfif" alt="Pizza apimentada do Foxy" loading="lazy">
+                    <a href="paginapizzafoxy.html">Confira a pizza do Foxy</a>
+                </article>
+                <article class="Pizzaria lista">
+                    <h3>Pizza do Bonnie</h3>
+                    <p>Vegetariana com cogumelos e pimentões coloridos.</p>
+                    <img src="../imagens/pizzabonnie.jfif" alt="Pizza vegetariana do Bonnie" loading="lazy">
+                    <a href="paginapizzabonnie.html">Confira a pizza do Bonnie</a>
+                </article>
+                <article class="Pizzaria lista">
+                    <h3>Pizza do Springtrap</h3>
+                    <p>Calabresa defumada, cebola roxa e jalapeño.</p>
+                    <img src="../imagens/PizzadoSpringtrap.png" alt="Pizza do Springtrap" loading="lazy">
+                    <a href="paginaspringtrap.html">Confira a pizza do Springtrap</a>
+                </article>
+                <article class="Pizzaria lista">
+                    <h3>Pizza do Golden Freddy</h3>
+                    <p>Queijos especiais, alho crocante e toque de trufas.</p>
+                    <img src="../imagens/pizzagoldenfreddy02.png" alt="Pizza do Golden Freddy" loading="lazy">
+                    <a href="paginaGoldenFreddy.html">Confira a pizza do Golden Freddy</a>
+                </article>
+                <article class="Pizzaria lista">
+                    <h3>Pizza da Circus Baby</h3>
+                    <p>Queijo cremoso, milho e abacaxi caramelizado.</p>
+                    <img src="../imagens/pizzacircusbaby.png" alt="Pizza da Circus Baby" loading="lazy">
+                    <a href="paginaCircusBaby.html">Confira a pizza da Circus Baby</a>
+                </article>
+                <article class="Pizzaria lista">
+                    <h3>Pizza do Ennard</h3>
+                    <p>Quatro queijos, carne desfiada e cebola crocante.</p>
+                    <img src="../imagens/pizzaennard.png" alt="Pizza do Ennard" loading="lazy">
+                    <a href="paginaEnnard.html">Confira a pizza do Ennard</a>
+                </article>
+                <article class="Pizzaria lista">
+                    <h3>Pizza da Puppet</h3>
+                    <p>Peito de peru, cebola, mussarela e cream cheese.</p>
+                    <img src="../imagens/pizzapuppet.jifi.png" alt="Pizza da Puppet" loading="lazy">
+                    <a href="paginaPuppet.html">Confira a pizza da Puppet</a>
+                </article>
+                <article class="Pizzaria lista">
+                    <h3>Pizza do Glamrock Freddy</h3>
+                    <p>Pepperoni crocante, cheddar e molho barbecue.</p>
+                    <img src="../imagens/pizzaGlamrockFreddy.png" alt="Pizza do Glamrock Freddy" loading="lazy">
+                    <a href="paginaGlamrockFreddy.html">Confira a pizza do Glamrock Freddy</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Freddy's Pizza Arcade - Cuidado com o turno da noite...</p>
+    </footer>
+    <script>
+        const campoBusca = document.querySelector('#pesquisa');
+        const pizzas = [...document.querySelectorAll('.Pizzaria.lista')];
+        const avisoVazio = document.querySelector('#sem-resultados');
+
+        campoBusca.addEventListener('input', () => {
+            const termo = campoBusca.value.trim().toLocaleLowerCase('pt-BR');
+            let visiveis = 0;
+            pizzas.forEach((pizza) => {
+                const corresponde = pizza.textContent.toLocaleLowerCase('pt-BR').includes(termo);
+                pizza.hidden = !corresponde;
+                if (corresponde) visiveis += 1;
+            });
+            avisoVazio.hidden = visiveis > 0;
+        });
+    </script>
+</body>
+</html>
