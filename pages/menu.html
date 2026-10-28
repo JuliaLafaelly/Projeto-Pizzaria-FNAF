@@ -35,61 +35,61 @@
                     <h3>Pizza do Freddy</h3>
                     <p>Calabresa, queijo e molho especial sombrio.</p>
                     <img src="../imagens/pizzafreddy.jfif" alt="Pizza de calabresa do Freddy" loading="lazy">
-                    <a href="paginapizzafreddy.html">Confira a pizza do Freddy</a>
+                    <a href="paginapizzafreddy.html">Confira a pizza</a>
                 </article>
                 <article class="Pizzaria lista">
                     <h3>Pizza da Chica</h3>
                     <p>Frango, milho e catupiry. Favorita dos animatrônicos!</p>
                     <img src="../imagens/pizzachica.jfif" alt="Pizza de frango e milho da Chica" loading="lazy">
-                    <a href="paginapizzachica.html">Confira a pizza da Chica</a>
+                    <a href="paginapizzachica.html">Confira a pizza</a>
                 </article>
                 <article class="Pizzaria lista">
                     <h3>Pizza do Foxy</h3>
                     <p>Atum apimentado, cebola roxa e molho picante.</p>
                     <img src="../imagens/pizzafox.jfif" alt="Pizza apimentada do Foxy" loading="lazy">
-                    <a href="paginapizzafoxy.html">Confira a pizza do Foxy</a>
+                    <a href="paginapizzafoxy.html">Confira a pizza</a>
                 </article>
                 <article class="Pizzaria lista">
                     <h3>Pizza do Bonnie</h3>
                     <p>Vegetariana com cogumelos e pimentões coloridos.</p>
                     <img src="../imagens/pizzabonnie.jfif" alt="Pizza vegetariana do Bonnie" loading="lazy">
-                    <a href="paginapizzabonnie.html">Confira a pizza do Bonnie</a>
+                    <a href="paginapizzabonnie.html">Confira a pizza</a>
                 </article>
                 <article class="Pizzaria lista">
                     <h3>Pizza do Springtrap</h3>
                     <p>Calabresa defumada, cebola roxa e jalapeño.</p>
                     <img src="../imagens/PizzadoSpringtrap.png" alt="Pizza do Springtrap" loading="lazy">
-                    <a href="paginaspringtrap.html">Confira a pizza do Springtrap</a>
+                    <a href="paginaspringtrap.html">Confira a pizza</a>
                 </article>
                 <article class="Pizzaria lista">
                     <h3>Pizza do Golden Freddy</h3>
                     <p>Queijos especiais, alho crocante e toque de trufas.</p>
                     <img src="../imagens/pizzagoldenfreddy02.png" alt="Pizza do Golden Freddy" loading="lazy">
-                    <a href="paginaGoldenFreddy.html">Confira a pizza do Golden Freddy</a>
+                    <a href="paginaGoldenFreddy.html">Confira a pizza</a>
                 </article>
                 <article class="Pizzaria lista">
                     <h3>Pizza da Circus Baby</h3>
                     <p>Queijo cremoso, milho e abacaxi caramelizado.</p>
                     <img src="../imagens/pizzacircusbaby.png" alt="Pizza da Circus Baby" loading="lazy">
-                    <a href="paginaCircusBaby.html">Confira a pizza da Circus Baby</a>
+                    <a href="paginaCircusBaby.html">Confira a pizza</a>
                 </article>
                 <article class="Pizzaria lista">
                     <h3>Pizza do Ennard</h3>
                     <p>Quatro queijos, carne desfiada e cebola crocante.</p>
                     <img src="../imagens/pizzaennard.png" alt="Pizza do Ennard" loading="lazy">
-                    <a href="paginaEnnard.html">Confira a pizza do Ennard</a>
+                    <a href="paginaEnnard.html">Confira a pizza</a>
                 </article>
                 <article class="Pizzaria lista">
                     <h3>Pizza da Puppet</h3>
                     <p>Peito de peru, cebola, mussarela e cream cheese.</p>
                     <img src="../imagens/pizzapuppet.jifi.png" alt="Pizza da Puppet" loading="lazy">
-                    <a href="paginaPuppet.html">Confira a pizza da Puppet</a>
+                    <a href="paginaPuppet.html">Confira a pizza</a>
                 </article>
                 <article class="Pizzaria lista">
                     <h3>Pizza do Glamrock Freddy</h3>
                     <p>Pepperoni crocante, cheddar e molho barbecue.</p>
                     <img src="../imagens/pizzaGlamrockFreddy.png" alt="Pizza do Glamrock Freddy" loading="lazy">
-                    <a href="paginaGlamrockFreddy.html">Confira a pizza do Glamrock Freddy</a>
+                    <a href="paginaGlamrockFreddy.html">Confira a pizza</a>
                 </article>
             </div>
         </section>
@@ -98,21 +98,6 @@
     <footer>
         <p>&copy; 2026 Freddy's Pizza Arcade - Cuidado com o turno da noite...</p>
     </footer>
-    <script>
-        const campoBusca = document.querySelector('#pesquisa');
-        const pizzas = [...document.querySelectorAll('.Pizzaria.lista')];
-        const avisoVazio = document.querySelector('#sem-resultados');
-
-        campoBusca.addEventListener('input', () => {
-            const termo = campoBusca.value.trim().toLocaleLowerCase('pt-BR');
-            let visiveis = 0;
-            pizzas.forEach((pizza) => {
-                const corresponde = pizza.textContent.toLocaleLowerCase('pt-BR').includes(termo);
-                pizza.hidden = !corresponde;
-                if (corresponde) visiveis += 1;
-            });
-            avisoVazio.hidden = visiveis > 0;
-        });
-    </script>
+        <script src="../js/script.js" defer></script>
 </body>
 </html>

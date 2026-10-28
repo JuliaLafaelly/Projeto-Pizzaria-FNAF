@@ -52,31 +52,15 @@
                 <label for="telefone">Telefone:</label>
                 <input type="tel" id="telefone" name="telefone" autocomplete="tel" required>
 
-                <button type="submit">Revisar pedido</button>
+                <button type="submit">Fazer pedido</button>
             </form>
             <p id="confirmacao-pedido" class="confirmacao-pedido" role="status" aria-live="polite" hidden></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Freddy's Pizza Arcade - Cuidado com o turno da noite...</p>
+        <p>&copy; 2025 Freddy's Pizza Arcade - Cuidado com o turno da noite...</p>
     </footer>
-    <script>
-        const parametros = new URLSearchParams(window.location.search);
-        const pizzaSolicitada = parametros.get('pizza');
-        const seletorPizza = document.querySelector('#pizza');
-        if (pizzaSolicitada && [...seletorPizza.options].some((opcao) => opcao.value === pizzaSolicitada)) {
-            seletorPizza.value = pizzaSolicitada;
-        }
-
-        document.querySelector('#form-pedido').addEventListener('submit', (evento) => {
-            evento.preventDefault();
-            const dados = new FormData(evento.currentTarget);
-            const nomePizza = seletorPizza.options[seletorPizza.selectedIndex].text;
-            const confirmacao = document.querySelector('#confirmacao-pedido');
-            confirmacao.textContent = `Demonstração concluída, ${dados.get('nome')}! Seu pedido de ${nomePizza} foi revisado, mas não foi enviado. Esta página ainda não possui sistema de pedidos.`;
-            confirmacao.hidden = false;
-        });
-    </script>
+    <script src="../js/script.js" defer></script>
 </body>
 </html>
