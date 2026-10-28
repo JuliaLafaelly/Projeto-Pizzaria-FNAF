@@ -26,27 +26,6 @@ Criar uma experiência de navegação temática para uma pizzaria fictícia, reu
 
 O projeto não apresenta dependências de frameworks, bibliotecas ou ferramentas de build. Não há JavaScript próprio identificado no escopo atual.
 
-## Estrutura do projeto
-
-```text
-.
-├── index.html                 # Página inicial e destaques do cardápio
-├── menu.html                  # Lista de pizzas temáticas
-├── pedido.html                # Formulário de pedido
-├── estillo.css                # Estilos compartilhados do site
-├── paginaCircusBaby.html      # Detalhe da pizza da Circus Baby
-├── paginaEnnard.html          # Detalhe da pizza do Ennard
-├── paginaGlamrockFreddy.html  # Detalhe da pizza do Glamrock Freddy
-├── paginaGoldenFreddy.html    # Detalhe da pizza do Golden Freddy
-├── paginaPuppet.html          # Detalhe da pizza da Puppet
-├── paginapizzabonnie.html     # Detalhe da pizza do Bonnie
-├── paginapizzachica.html      # Detalhe da pizza da Chica
-├── paginapizzafoxy.html       # Detalhe da pizza do Foxy
-├── paginapizzafreddy.html     # Detalhe da pizza do Freddy
-├── paginaspringtrap.html      # Detalhe da pizza do Springtrap
-└── imagens/                   # Imagens usadas nas páginas
-```
-
 ## Website hospedado
 
 O website está hospedado no GitHub Pages e pode ser acessado pelo link:
